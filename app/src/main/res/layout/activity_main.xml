@@ -137,11 +137,13 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_margin="16dp"
+        android:textStyle="italic"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/makeOrderBtn"
-        tools:text="Total: 20PLN" />
+        tools:text="Total: $20LN" />
 
     <TextView
         android:id="@+id/discountOne"
@@ -157,7 +159,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:textColor="#000000"
         android:text="Buy 3 breads to get one free"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@id/discountOne" />
 </android.support.constraint.ConstraintLayout>

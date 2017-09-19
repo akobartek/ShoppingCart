@@ -36,15 +36,6 @@ class MainActivity : AppCompatActivity(), MainView {
         }
     }
 
-    fun getCurrentQuantity(pos: Int): Int {
-        when (pos) {
-            1 -> return firstProductQuantity.text.toString().toInt()
-            2 -> return secondProductQuantity.text.toString().toInt()
-            3 -> return thirdProductQuantity.text.toString().toInt()
-            else -> return 0
-        }
-    }
-
     override fun getTotalPrice(): String = totalPriceTextView.text.toString()
 
     override fun disableButton(pos: Int) {
@@ -72,7 +63,7 @@ class MainActivity : AppCompatActivity(), MainView {
     }
 
     override fun setTotalPrice(price: Double) {
-        val text = "Razem: " + price.toString() + "$"
+        val text = "Total: $" + price.toString()
         totalPriceTextView.text = text
     }
 }
