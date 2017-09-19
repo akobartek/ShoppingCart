@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.example.android.shoppingcart.ui.MainActivity">
+
+
+    <TextView
+        android:id="@+id/firstProductTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bread ($3)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/firstProductMinusBtn"
+        app:layout_constraintTop_toTopOf="@+id/firstProductMinusBtn" />
+
+    <Button
+        android:id="@+id/firstProductMinusBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:enabled="false"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/firstProductQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/firstProductMinusBtn"
+        app:layout_constraintEnd_toStartOf="@id/firstProductMinusBtn"
+        app:layout_constraintTop_toTopOf="@+id/firstProductMinusBtn" />
+
+    <Button
+        android:id="@+id/firstProductPlusBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="+"
+        app:layout_constraintEnd_toStartOf="@id/firstProductQuantity" />
+
+    <TextView
+        android:id="@+id/secondProductTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beer ($12)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/secondProductMinusBtn"
+        app:layout_constraintTop_toTopOf="@+id/secondProductMinusBtn" />
+
+    <Button
+        android:id="@+id/secondProductMinusBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:enabled="false"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstProductMinusBtn" />
+
+    <TextView
+        android:id="@+id/secondProductQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/secondProductMinusBtn"
+        app:layout_constraintEnd_toStartOf="@id/secondProductMinusBtn"
+        app:layout_constraintTop_toTopOf="@+id/secondProductMinusBtn" />
+
+    <Button
+        android:id="@+id/secondProductPlusBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="+"
+        app:layout_constraintEnd_toStartOf="@id/secondProductQuantity"
+        app:layout_constraintTop_toBottomOf="@+id/firstProductMinusBtn" />
+
+    <TextView
+        android:id="@+id/thirdProductTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Milk ($5)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/thirdProductMinusBtn"
+        app:layout_constraintTop_toTopOf="@+id/thirdProductMinusBtn" />
+
+    <Button
+        android:id="@+id/thirdProductMinusBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:enabled="false"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondProductMinusBtn" />
+
+    <TextView
+        android:id="@+id/thirdProductQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/thirdProductMinusBtn"
+        app:layout_constraintEnd_toStartOf="@id/thirdProductMinusBtn"
+        app:layout_constraintTop_toTopOf="@+id/thirdProductMinusBtn" />
+
+    <Button
+        android:id="@+id/thirdProductPlusBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="+"
+        app:layout_constraintEnd_toStartOf="@id/thirdProductQuantity"
+        app:layout_constraintTop_toBottomOf="@+id/secondProductMinusBtn" />
+
+    <Button
+        android:id="@+id/makeOrderBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Make order"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/totalPriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/makeOrderBtn"
+        tools:text="Total: 20PLN" />
+
+    <TextView
+        android:id="@+id/discountOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Make an order for $20 to get 10% discount"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@id/makeOrderBtn" />
+
+    <TextView
+        android:id="@+id/discountTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textColor="#000000"
+        android:text="Buy 3 breads to get one free"
+        app:layout_constraintBottom_toTopOf="@id/discountOne" />
+</android.support.constraint.ConstraintLayout>
