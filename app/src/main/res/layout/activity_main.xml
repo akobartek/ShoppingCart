@@ -88,7 +88,7 @@
         android:id="@+id/thirdProductTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Milk ($5)"
+        android:text="Water ($5)"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/thirdProductMinusBtn"
@@ -137,9 +137,9 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_margin="16dp"
-        android:textStyle="italic"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="#000000"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/makeOrderBtn"
@@ -150,7 +150,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="Make an order for $20 to get 10% discount"
+        android:text="Make an order for $20 to get 10% discount."
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@id/makeOrderBtn" />
 
@@ -159,7 +159,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="Buy 3 breads to get one free"
+        android:text="Buy 3 breads to get one free."
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@id/discountOne" />
+
+    <TextView
+        android:id="@+id/discountThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buy 10 beers to get 2 bottles of water free! This discount does not connect with others."
+        app:layout_constraintBottom_toTopOf="@id/discountTwo"
+        android:layout_marginBottom="16dp"
+        android:textColor="#000000" />
+
 </android.support.constraint.ConstraintLayout>

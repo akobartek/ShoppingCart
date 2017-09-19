@@ -15,8 +15,17 @@ class MainPresenter(private val view: MainView) {
         view.updateQuantity(productPosition, 1)
     }
 
-    fun makeOrder(breadQuantity: Int, beerQuantity: Int, milkQuantity: Int) {
-        var totalPrice = breadQuantity * 3.0 + beerQuantity * 12.0 + milkQuantity * 5.0
+    fun makeOrder(breadQuantity: Int, beerQuantity: Int, waterQuantity: Int) {
+        var totalPrice = breadQuantity * 3.0 + beerQuantity * 12.0 + waterQuantity * 5.0
+
+        if (beerQuantity >= 10) {
+            when (waterQuantity) {
+                2 -> totalPrice -= 10
+                1 -> totalPrice -= 5
+            }
+            view.setTotalPrice(totalPrice)
+            return
+        }
 
         val numberOfFreeBreads = (breadQuantity / 3)
         totalPrice -= numberOfFreeBreads * 3

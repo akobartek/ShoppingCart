@@ -29,9 +29,9 @@ class MainPresenterTest {
 
     @Test
     fun checkTotalResultWhenTotalPriceIsBiggerThen20() {
-        loginPresenter.makeOrder(5, 3, 6)
+        loginPresenter.makeOrder(2, 3, 6)
 
-        verify(view).setTotalPrice(70.2)
+        verify(view).setTotalPrice(64.8)
     }
 
     @Test
@@ -39,5 +39,12 @@ class MainPresenterTest {
         loginPresenter.makeOrder(7, 0, 0)
 
         verify(view).setTotalPrice(15.0)
+    }
+
+    @Test
+    fun checkBeerDiscount() {
+        loginPresenter.makeOrder(0, 10, 2)
+
+        verify(view).setTotalPrice(120.0)
     }
 }
